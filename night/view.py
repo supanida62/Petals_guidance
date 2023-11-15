@@ -28,7 +28,7 @@ def card(time, start_date, end_date, note, id):
     '''
 
 async def fetch_remind():
-    res = await pyfetch(url="http://127.0.0.1:8090/api/collections/reminds/records/?filter=(type='night')&skipTotal=true", method="GET")
+    res = await pyfetch(url="http://3.234.92.219//api/collections/reminds/records/?filter=(type='night')&skipTotal=true", method="GET")
     body = await res.json()
     for item in body.get('items'):
         id = item['id']
@@ -40,7 +40,7 @@ async def fetch_remind():
 
 async def delete_remind(event):
     id = event.target.querySelector("#id").value
-    url = "http://127.0.0.1:8090/api/collections/reminds/records/" + id
+    url = "http://3.234.92.219//api/collections/reminds/records/" + id
     res = await pyfetch(url=url, method="DELETE")
     if res.status == 204:
          window.location.reload()

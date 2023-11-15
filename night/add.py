@@ -19,7 +19,7 @@ async def add_remind(event):
     if not time_remind or not start_date or not end_date or not note:
         return None
 
-    url = 'http://127.0.0.1:8090/api/collections/reminds/records'
+    url = 'http://3.234.92.219//api/collections/reminds/records'
 
     remind_body = {
         'time_remind': time_remind,
